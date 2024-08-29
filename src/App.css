@@ -1,5 +1,7 @@
+/* src/App.css */
 .App {
   text-align: center;
+  font-family: 'Khula', sans-serif; /* Aplica la fuente Nunito */
 }
 
 .App-logo {
@@ -22,6 +24,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  font-family: 'Khula', sans-serif; /* Aplica la fuente Nunito */
 }
 
 .App-link {
