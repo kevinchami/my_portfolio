@@ -7,7 +7,7 @@ const Home = () => {
   const demoProjects = [
     {
       title: "Amigo LaTiul",
-      image: "/assets/amigo_port.gif",
+      video: "/assets/latiul_land.mp4",
       bgImage: "",
       bgColor: "#F35A33",
       fontFamily: "Khula, sans-serif",
@@ -21,9 +21,9 @@ const Home = () => {
     },
     {
       title: "Speenu",
-      image: "/assets/360_land.gif",
+      video: "/assets/speenu_land.mp4",
       bgImage: "",
-      bgColor: "#59C2B2",
+      bgColor: "#64CABA",
       fontFamily: "Khula, sans-serif",
       description: "360º Interactive Web Application",
       technologies: ["React", "Sirv", "Three.js"],
@@ -34,7 +34,7 @@ const Home = () => {
     },
     {
       title: "Weather Prediction API",
-      image: "/assets/weather_port.gif",
+      video: "/assets/weather_land.mp4",
       bgImage: "",
       bgColor: "#D2010F",
       fontFamily: "Khula, sans-serif",
@@ -47,9 +47,9 @@ const Home = () => {
     },
     {
         title: "Tania",
-        image: "/assets/tania_land.gif",
+        video: "/assets/tania_land.mp4",
         bgImage: "",
-        bgColor: "#9999FF",
+        bgColor: "#A2A3F9",
         fontFamily: "Khula, sans-serif",
         description: "Tania Landing Page & Algorithm Analyst",
         technologies: ["React", "Javascript", "Algorithms & Complexity"],
@@ -76,6 +76,7 @@ const Home = () => {
           <div key={index} className="flex justify-center mb-7">
             <ProjectCard
               title={project.title}
+              video={project.video}
               image={project.image}
               bgImage={project.bgImage}
               bgColor={project.bgColor}

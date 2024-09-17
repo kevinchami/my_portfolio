@@ -1,10 +1,10 @@
-// src/components/ProjectCard.jsx
 import React from "react";
 import { Link } from "react-router-dom";
 
 const ProjectCard = ({
   title,
   image,
+  video, // Nueva propiedad para video
   bgImage,
   bgColor,
   fontFamily,
@@ -17,9 +17,9 @@ const ProjectCard = ({
 }) => {
   return (
     <div
-        className={`w-[95%] md:w-[964px] h-auto md:h-[550px] p-6 rounded-lg shadow-lg flex flex-col md:flex-row transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl mx-auto`}
-        style={{
-        backgroundColor: bgColor, // Ensure bgColor is applied to the entire card
+      className={`w-[95%] md:w-[964px] h-auto md:h-[550px] p-6 rounded-lg shadow-lg flex flex-col md:flex-row transition-transform duration-300 ease-in-out hover:scale-105 hover:shadow-xl mx-auto`}
+      style={{
+        backgroundColor: bgColor,
         fontFamily,
       }}
     >
@@ -29,31 +29,31 @@ const ProjectCard = ({
         <div
           className="absolute"
           style={{
-            backgroundImage: `url('/assets/fondo.png')`, // Background image for the left side
+            backgroundImage: `url('/assets/fondo.png')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            opacity: 0.1, // High opacity for subtle background image
-            zIndex: 1, // Ensure the background is behind other elements
-            width: '70%', // Adjust width to make the background image smaller
-            height: '70%', // Adjust height to make the background image smaller
-            top: '10%', // Center the background vertically
-            left: '10%', // Center the background horizontally
+            opacity: 0.1,
+            zIndex: 1,
+            width: '70%',
+            height: '70%',
+            top: '10%',
+            left: '10%',
           }}
         ></div>
 
         {/* Content */}
         <div className="relative z-10 flex flex-col justify-center h-full ml-6">
-        <div className="flex items-center mb-4 md:mb-2"> {/* Change mb-2 to mb-4 for more margin on mobile */}
-            <h3 className="text-white text-3xl md:text-4xl font-bold mr-2">{title}</h3> {/* Use text-3xl on mobile and text-4xl on larger screens */}
+          <div className="flex items-center mb-4 md:mb-2">
+            <h3 className="text-white text-3xl md:text-4xl font-bold mr-2">{title}</h3>
             <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-                <img
+              <img
                 src="/assets/link.gif"
                 alt="Link icon"
                 className="w-6 h-6 rounded -mt-1.5 ml-1"
-                />
+              />
             </a>
-            </div>
-        <p className="text-white text-base md:text-sm mb-4 px-0">{description}</p> {/* Use text-base on mobile and text-sm on larger screens */}
+          </div>
+          <p className="text-white text-base md:text-sm mb-4 px-0">{description}</p>
 
           <Link
             to="/about"
@@ -74,18 +74,34 @@ const ProjectCard = ({
         </div>
       </div>
 
-      {/* Right Side - Image */}
+      {/* Right Side - Image or Video */}
       <div className="flex-1 flex items-center justify-center mt-4 md:mt-0">
-        <img
-          src={image}
-          alt={title}
-          className="object-cover"
-          style={{
-            maxWidth: maxWidth,
-            maxHeight: maxHeight,
-            borderRadius: borderRadius,
-          }}
-        />
+        {video ? (
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            style={{
+              maxWidth: maxWidth,
+              maxHeight: maxHeight,
+              borderRadius: borderRadius,
+            }}
+          >
+            <source src={video} type="video/mp4" />
+          </video>
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="object-cover"
+            style={{
+              maxWidth: maxWidth,
+              maxHeight: maxHeight,
+              borderRadius: borderRadius,
+            }}
+          />
+        )}
       </div>
     </div>
   );
