@@ -5,24 +5,32 @@ import TimelineItem from '../components/TimelineItem';
 const About = () => {
   const timelineData = [
     {
-      title: 'Intern Data Scientist',
+      title: 'Full Stack Engineer',
       years: '2024-Present',
+      location: 'Surecomp',
+      description: "Contributing to the development of Surecomp's RIVO product, specializing in microservices (Node.js) and microfrontends (TypeScript, React, Redux). Managing databases with MongoDB and PostgreSQL, ensuring scalable and efficient solutions for trade finance.",
+      technologies: ['Node.js', 'React', 'TypeScript', 'Redux', 'MongoDB', 'PostgreSQL', 'Microservices', 'Microfrontends'],
+      logo: '/assets/surecomp_logo.jpeg',
+    },
+    {
+      title: 'Intern Data Scientist',
+      years: '2024-2024',
       location: 'Dooiu',
       description: "Developing a Python AI chatbot for Dooiu's mobile app, leveraging advanced datasets and Pinecone database embeddings. Designing a test web interface, refining algorithms for better query matching, and preparing for chatbot integration into the mobile app. Managing backend with Flask and overseeing deployment via Render, ensuring seamless project execution.",
       technologies: ['Python', 'AI', 'Chatbot Development', 'JavaScript', 'HTML', 'Flask', 'Pinecone'],
       logo: '/assets/dooiu_logo.jpeg',
     },
-    {
-      title: 'Algorithm Analyst',
-      years: '2024-Present',
-      location: 'Tania',
-      description: "As an Algorithm Analyst, I research and analyze the time complexity of encrypted message transmission processes, working closely under the supervision of the CTO. Also developed the landing page for the company",
-      technologies: ["React", "Encryption", "Algorithm Optimization", "Complexity Analysis", "Data Security"],
-      logo: "/assets/tania_logo.png"
-    },
+    // {
+    //   title: 'Algorithm Analyst',
+    //   years: '2024-Present',
+    //   location: 'Tania',
+    //   description: "As an Algorithm Analyst, I research and analyze the time complexity of encrypted message transmission processes, working closely under the supervision of the CTO. Also developed the landing page for the company",
+    //   technologies: ["React", "Encryption", "Algorithm Optimization", "Complexity Analysis", "Data Security"],
+    //   logo: "/assets/tania_logo.png"
+    // },
     {
       title: 'Developed Amigo LaTiul Mobile App',
-      years: '2023-2024',
+      years: '2023-Present',
       location: 'Freelance',
       description: 'Developed a mobile application, addressing challenges in real-time data synchronization and Firebase user authentication. Integrated machine learning models into the app, along with connections to external APIs. The application is currently being tested with a closed group, with deployment to the Apple Store and Play Store underway.',
       technologies: ['React Native', 'MongoDB', 'Node.js', 'Express'],
@@ -44,14 +52,14 @@ const About = () => {
       technologies: [],
       logo: '/assets/barilan.svg',
     },
-    {
-      title: 'Volunteer Combat Soldier',
-      years: '2018-2019',
-      location: 'IDF',
-      description: 'Served as a volunteer combat soldier in the IDF, demonstrating leadership and the ability to perform under pressure in challenging environments.',
-      technologies: ['Team Leadership', 'High-pressure Work Environments'],
-      logo: '/assets/idf.svg',
-    },
+    // {
+    //   title: 'Volunteer Combat Soldier',
+    //   years: '2018-2019',
+    //   location: 'IDF',
+    //   description: 'Served as a volunteer combat soldier in the IDF, demonstrating leadership and the ability to perform under pressure in challenging environments.',
+    //   technologies: ['Team Leadership', 'High-pressure Work Environments'],
+    //   logo: '/assets/idf.svg',
+    // },
   ];
 
   return (
